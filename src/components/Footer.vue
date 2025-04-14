@@ -5,10 +5,7 @@
         <!-- Company Info -->
         <div>
           <div class="flex items-center space-x-2 mb-6">
-            <div class="bg-white rounded-full p-2">
-              <Plane class="h-8 w-8 text-blue-600" />
-            </div>
-            <span class="text-2xl font-bold text-white">TutiTrade</span>
+            <img src="../assets/icons/logo.svg" alt="logo" class="h-12 w-auto" />
           </div>
           <p class="text-gray-300 mb-6">
             Професійні послуги із замовлення товарів з Китаю з доставкою в Україну.
@@ -16,13 +13,13 @@
           </p>
           <div class="flex space-x-4">
             <a href="#" class="p-2 rounded-full transition-colors">
-              <Icon name="fe:facebook" class="h-5 w-5" />
+              <Icon name="fe:facebook" class="h-6 w-6 min-h-6 min-w-6" />
             </a>
             <a href="#" class="p-2 rounded-full transition-colors">
-              <Icon name="fe:instagram" class="h-5 w-5" />
+              <Icon name="fe:instagram" class="h-6 w-6 min-h-6 min-w-6" />
             </a>
             <a href="#" class="p-2 rounded-full transition-colors">
-              <Icon name="fe:messanger" class="h-5 w-5" />
+              <Icon name="fe:messanger" class="h-6 w-6 min-h-6 min-w-6" />
             </a>
           </div>
         </div>
@@ -35,21 +32,21 @@
           </h3>
           <ul class="space-y-4">
             <li class="flex items-start space-x-3">
-              <Icon name="lucide:phone" class="h-5 w-5 text-gray-400 mt-0.5" />
+              <Icon name="lucide:phone" class="h-6 w-6 min-h-6 min-w-6 text-gray-400 mt-0.5" />
               <div>
-                <p class="text-white">+380 97 123 45 67</p>
+                <a href="tel:+380971234567" class="text-white">+380 97 123 45 67</a>
                 <p class="text-sm text-gray-400">Пн-Пт, 9:00-18:00</p>
               </div>
             </li>
             <li class="flex items-start space-x-3">
-              <Icon name="lucide:mail" class="h-5 w-5 text-gray-400 mt-0.5" />
+              <Icon name="lucide:mail" class="h-6 w-6 min-h-6 min-w-6 text-gray-400 mt-0.5" />
               <div>
-                <p class="text-white">info@tutitrade.com</p>
+                <a href="mailto:info@tutitrade.com" class="text-white">info@tutitrade.com</a>
                 <p class="text-sm text-gray-400">Зв'яжіться з нами по email</p>
               </div>
             </li>
             <li class="flex items-start space-x-3">
-              <Icon name="lucide:map-pin" class="h-5 w-5 text-gray-400 mt-0.5" />
+              <Icon name="lucide:map-pin" class="h-6 w-6 min-h-6 min-w-6 text-gray-400 mt-0.5" />
               <div>
                 <p class="text-white">Київ, Україна</p>
                 <p class="text-sm text-gray-400">Центральний офіс</p>
@@ -67,44 +64,44 @@
           <div class="grid grid-cols-2 gap-3">
             <button 
               @click="scrollToSection('home')"
-              class="text-gray-300 hover:text-white transition-colors flex items-center space-x-1 text-left"
+              class="text-gray-300 hover:text-white transition-colors flex items-center space-x-1 text-left cursor-pointer"
             >
-              <Icon name="lucide:arrow-right" class="h-3 w-3" />
+              <Icon name="lucide:arrow-right" class="h-4 w-4" />
               <span>Головна</span>
             </button>
             <button 
               @click="scrollToSection('how-we-work')"
-              class="text-gray-300 hover:text-white transition-colors flex items-center space-x-1 text-left"
+              class="text-gray-300 hover:text-white transition-colors flex items-center space-x-1 text-left cursor-pointer"
             >
-            <Icon name="lucide:arrow-right" class="h-3 w-3" />
+            <Icon name="lucide:arrow-right" class="h-4 w-4" />
               <span>Як ми працюємо</span>
             </button>
             <button 
               @click="scrollToSection('advantages')"
-              class="text-gray-300 hover:text-white transition-colors flex items-center space-x-1 text-left"
+              class="text-gray-300 hover:text-white transition-colors flex items-center space-x-1 text-left cursor-pointer"
             >
-              <ArrowRight class="h-3 w-3" />
+            <Icon name="lucide:arrow-right" class="h-4 w-4" />
               <span>Переваги</span>
             </button>
             <button 
               @click="scrollToSection('about')"
-              class="text-gray-300 hover:text-white transition-colors flex items-center space-x-1 text-left"
+              class="text-gray-300 hover:text-white transition-colors flex items-center space-x-1 text-left cursor-pointer"
             >
-              <Icon name="lucide:arrow-right" class="h-3 w-3" />
+              <Icon name="lucide:arrow-right" class="h-4 w-4" />
               <span>Про нас</span>
             </button>
             <button 
               @click="scrollToSection('faq')"
-              class="text-gray-300 hover:text-white transition-colors flex items-center space-x-1 text-left"
+              class="text-gray-300 hover:text-white transition-colors flex items-center space-x-1 text-left cursor-pointer"
             >
-            <Icon name="lucide:arrow-right" class="h-3 w-3" />
+            <Icon name="lucide:arrow-right" class="h-4 w-4" />
               <span>FAQ</span>
             </button>
             <button 
               @click="scrollToSection('contact')"
-              class="text-gray-300 hover:text-white transition-colors flex items-center space-x-1 text-left"
+              class="text-gray-300 hover:text-white transition-colors flex items-center space-x-1 text-left cursor-pointer"
             >
-            <Icon name="lucide:arrow-right" class="h-3 w-3" />
+            <Icon name="lucide:arrow-right" class="h-4 w-4" />
               <span>Контакти</span>
             </button>
           </div>

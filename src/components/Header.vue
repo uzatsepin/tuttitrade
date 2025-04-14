@@ -2,9 +2,7 @@
   <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" :class="[scrolled ? 'bg-gray-900/90 backdrop-blur-md shadow-lg py-3' : 'bg-transparent py-5']">
     <div class="container mx-auto px-4 flex items-center justify-between">
       <!-- Logo -->
-      <div class="flex items-center">
-        <span class="text-2xl font-bold" :class="[scrolled ? 'text-blue-400' : 'text-white']">TutiTrade</span>
-      </div>
+      <img src="../assets/icons/logo.svg" alt="logo" class="h-14 w-auto" />
       
       <!-- Navigation -->
       <nav class="hidden md:flex space-x-8">

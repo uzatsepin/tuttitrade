@@ -146,12 +146,11 @@
                 <p class="mb-8 text-lg opacity-90">
                     Наші фахівці готові відповісти на всі ваші запитання та допомогти з вибором оптимального рішення для вашого бізнесу.
                 </p>
-                <button
-                    @click="scrollToContact"
-                    class="bg-white text-blue-700 font-semibold py-3 px-8 rounded-md transition-all duration-300 hover:bg-yellow-400 hover:text-white hover:scale-105 shadow-md"
-                >
-                    Задати питання
-                </button>
+                <OthersPrimaryButton 
+                    :title="'Задати питання'"
+                    :icon="'fluent:question-24-filled'"
+                    @buttonClick="scrollToContact"
+                />
             </div>
         </div>
     </section>

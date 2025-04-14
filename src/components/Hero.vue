@@ -13,7 +13,8 @@
           <div class="absolute h-64 w-64 rounded-full bg-blue-600/10 top-3/4 left-1/3 blur-2xl animate-float-delay-1"></div>
           
           <!-- Grid overlay for professional look -->
-          <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+          <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
+		  </div>
         </div>
       </div>
     </div>
@@ -23,7 +24,6 @@
       <!-- Airplane animation -->
       <div class="absolute top-[20%] -left-20 animate-plane-flight">
         <Icon name="fa6-solid:plane" class="text-blue-400/60 w-24 h-24 transform -rotate-12" />
-        <div class="absolute w-full h-0.5 top-1/2 left-24 bg-gradient-to-r from-blue-400/60 to-transparent" style="width: 200px;"></div>
       </div>
 
       <!-- Container ship animation -->
@@ -41,7 +41,7 @@
       <div class="flex flex-col md:flex-row items-center">
         <!-- Hero Text Content -->
         <div class="w-full md:w-1/2 text-white mb-10 md:mb-0">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in">
+          <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in">
             Ваш товар з Китаю — <br />
             <span class="text-blue-400">просто та надійно!</span>
           </h1>
@@ -106,13 +106,12 @@
           </div>
           
           <!-- Modernized Action Button -->
-          <button 
-            class="modern-button animate-fade-in-delay-1200 inline-flex items-center space-x-2"
-            @click="scrollToContact"
-          >
-            <span class="relative z-10 font-medium">Замовити консультацію</span>
-            <Icon name="lucide:arrow-right" class="h-5 w-5 relative z-10 transition-transform duration-300" />
-          </button>
+          <OthersPrimaryButton
+            :text="'Замовити консультацію'"
+            :icon="'lucide:arrow-right'"
+            class="modern-button animate-fade-in-delay-1200 w-full justify-center lg:w-fit"
+            @buttonClick="scrollToContact"
+           />
         </div>
 
         <!-- Contact Form with professional glassmorphism -->
@@ -154,13 +153,12 @@
                   class="w-full bg-white/20 border border-white/30 focus:border-blue-400 h-24 text-white rounded-md px-4 py-3 outline-none placeholder:text-white/70 resize-none"
                 ></textarea>
               </div>
-              
-              <button 
-                type="submit" 
-                class="modern-button w-full"
-              >
-                Відправити
-              </button>
+              <OthersPrimaryButton 
+			  	:text="'Відправити'"
+				:icon="'lucide:send'"
+				class="modern-button animate-fade-in-delay-1200 flex items-center justify-center w-full"
+				@buttonClick="handleSubmit"
+			  />
             </div>
             
             <p class="text-white/80 text-xs mt-4 text-center">
@@ -174,7 +172,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, onMounted } from 'vue';
 
 // Form state
 const formData = ref({
@@ -380,49 +378,5 @@ onMounted(() => {
 .animate-fade-in-delay-1500 {
   animation: fadeIn 0.8s ease-out 1.5s forwards;
   opacity: 0;
-}
-
-/* Modern button with sleek hover effect */
-.modern-button {
-  position: relative;
-  padding: 0.875rem 2rem;
-  font-size: 1.125rem;
-  color: #fff;
-  background: linear-gradient(90deg, #3b82f6, #2563eb);
-  border-radius: 0.375rem;
-  overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-}
-
-.modern-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.2);
-  transform: skewX(-20deg);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  z-index: 1;
-}
-
-.modern-button:hover {
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
-  transform: translateY(-2px);
-}
-
-.modern-button:hover::before {
-  width: 120%;
-}
-
-.modern-button:hover .h-5 {
-  transform: translateX(4px);
-}
-
-.modern-button:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.2);
 }
 </style>

@@ -55,8 +55,8 @@
             <p class="text-base text-blue-100 leading-snug">{{ stat.label }}</p>
             
             <!-- Decorative element -->
-            <div class="absolute bottom-0 right-0 w-20 h-20 opacity-10">
-              <Icon :name="stat.icon" class="h-full w-full" />
+            <div class="absolute bottom-0 right-0 w-20 h-20 min-w-20 min-h-20 opacity-10">
+              <Icon :name="stat.icon" class="h-full w-full min-w-20 min-h-20" />
             </div>
           </div>
         </div>
@@ -203,7 +203,7 @@ const statisticsSection = ref<HTMLElement | null>(null);
 
 // Mobile carousel state
 const currentSlide = ref(0);
-const autoplayInterval = ref<NodeJS.Timer | null>(null);
+const autoplayInterval = ref<ReturnType<typeof setInterval> | null>(null);
 
 // Methods for carousel
 const nextSlide = () => {
